@@ -5,7 +5,7 @@ import { HttpLink } from 'apollo-link-http'
   
 export const client = new ApolloClient({
 link: new HttpLink({
-uri: 'https://api.thegraph.com/subgraphs/name/shibcakeswap/scs-subgraph',
+uri: 'https://api.thegraph.com/subgraphs/name/shibcakeswap/shibcakeswapsubgraphv1',
 }),
 cache: new InMemoryCache(),
 shouldBatch: true,
@@ -37,7 +37,7 @@ export const stakingClient = new ApolloClient({
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://api.thegraph.com/subgraphs/name/shibcakeswap/scs-blocks',
+    uri: 'https://api.thegraph.com/subgraphs/name/shibcakeswap/shibcakeswapblocksv1',
   }),
   cache: new InMemoryCache(),
 })
